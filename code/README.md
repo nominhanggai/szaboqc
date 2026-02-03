@@ -8,12 +8,6 @@ This repository contains two Fortran implementations of the Appendix B example u
 
 ---
 
-## Purpose
-This repository is intended for researchers and developers who would like a readable Fortran-90 version of the Appendix B code while keeping the original Fortran-77 source for direct comparison.  
-The revised code improves code structure and numerical robustness by using LAPACK for eigenvalue decomposition, while preserving the original variable names and electronic integral calculations so that results can be easily verified.
-
----
-
 ## Key changes (changelog)
 The file `AppendixBcode_revised.f90` includes the following major modifications relative to `AppendixBcode.f90`:
 
@@ -39,4 +33,5 @@ The file `AppendixBcode_revised.f90` includes the following major modifications 
 ### Linux (example)
 ```bash
 gfortran -o HeH AppendixBcode_revised.f90 -llapack
+
 
