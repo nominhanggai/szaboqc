@@ -1,4 +1,4 @@
-# Appendix B Code
+# Appendix B Source Code
 
 **Short summary:**  
 This repository contains two Fortran implementations of the Appendix B example used for HeH<sup>+</sup> SCF.
@@ -33,5 +33,6 @@ The file `AppendixBcode_revised.f90` includes the following major modifications 
 ### Linux (example)
 ```bash
 gfortran -o HeH AppendixBcode_revised.f90 -llapack
+
 
 
