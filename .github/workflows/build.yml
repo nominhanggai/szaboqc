@@ -31,7 +31,7 @@ jobs:
           wget ${{ env.CTAN_URL }}/systems/texlive/tlnet/install-tl-unx.tar.gz
           tar -xzf install-tl-unx.tar.gz
           cd install-tl-20* && ./install-tl --profile ../.github/workflows/texlive.profile
-          tlmgr install ${{ env.TL_PACKAGES }} ${{ env.TL_FONT_PCK }}
+          tlmgr install ${{ env.TL_PACKAGES }} ${{ env.TL_FONT_PCK }} --repository=${{ env.CTAN_URL }}/systems/texlive/tlnet/
           tlmgr update --self --all --no-auto-install --repository=${{ env.CTAN_URL }}/systems/texlive/tlnet/
       - name: Compile test file
         run: |
