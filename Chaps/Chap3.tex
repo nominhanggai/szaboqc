@@ -569,10 +569,10 @@ $\scr{L}$的一阶变分\autoref{3.42}成为
 \begin{align}
 	\mathbf{A} = 
 	\begin{pmatrix}
-		\chi_a(1) & \chi_2(1) & \cdots & \chi_a(1) & \cdots & \chi_N(1) \\
-		\chi_a(2) & \chi_2(2) & \cdots & \chi_a(2) & \cdots & \chi_N(2) \\
+		\chi_1(1) & \chi_2(1) & \cdots & \chi_a(1) & \cdots & \chi_N(1) \\
+		\chi_1(2) & \chi_2(2) & \cdots & \chi_a(2) & \cdots & \chi_N(2) \\
 		\vdots    & \vdots    &        & \vdots    &        & \vdots    \\
-		\chi_a(N) & \chi_2(N) & \cdots & \chi_a(N) & \cdots & \chi_N(N)
+		\chi_1(N) & \chi_2(N) & \cdots & \chi_a(N) & \cdots & \chi_N(N)
 	\end{pmatrix}
 \end{align}
 以使波函数$\ket{\Psi_0}$就是该矩阵的归一化行列式：
@@ -585,22 +585,22 @@ $\scr{L}$的一阶变分\autoref{3.42}成为
 \begin{align}
 	\mathbf{A}'  = \mathbf{AU} & = 
 	\begin{pmatrix}
-		\chi_a(1) & \chi_2(1) & \cdots & \chi_N(1) \\
-		\chi_a(2) & \chi_2(2) & \cdots & \chi_N(2) \\
+		\chi_1(1) & \chi_2(1) & \cdots & \chi_N(1) \\
+		\chi_1(2) & \chi_2(2) & \cdots & \chi_N(2) \\
 		\vdots    & \vdots    &        & \vdots    \\
-		\chi_a(N) & \chi_2(N) & \cdots & \chi_N(N)
+		\chi_1(N) & \chi_2(N) & \cdots & \chi_N(N)
 	\end{pmatrix}
 	\begin{pmatrix}
 		U_{11} & U_{12} & \cdots & U_{1N} \\
-		U_{11} & U_{12} & \cdots & U_{1N} \\
+		U_{21} & U_{22} & \cdots & U_{2N} \\
 		\vdots & \vdots &        & \vdots \\
 		U_{N1} & U_{N2} & \cdots & U_{NN}
 	\end{pmatrix} \notag\\
 	& = \begin{pmatrix}
-		\chi_a'(1) & \chi_2'(1) & \cdots & \chi_N'(1) \\
-		\chi_a'(2) & \chi_2'(2) & \cdots & \chi_N'(2) \\
+		\chi_1'(1) & \chi_2'(1) & \cdots & \chi_N'(1) \\
+		\chi_1'(2) & \chi_2'(2) & \cdots & \chi_N'(2) \\
 		\vdots     & \vdots     &        & \vdots     \\
-		\chi_a'(N) & \chi_2'(N) & \cdots & \chi_N'(N)
+		\chi_1'(N) & \chi_2'(N) & \cdots & \chi_N'(N)
 	\end{pmatrix}
 \end{align}
 而且由于
@@ -744,7 +744,7 @@ Fock算符对这些被占轨道有泛函的依赖,
 用\autoref{3.16}的Fock算符表达式可知, 
 轨道能量可以写作：
 \begin{align}
-	\epsilon_i & = \braket{\chi_i|h|\chi_i} = \braket{\chi_i|h+\sum_b(\scr{J}_b-\scr{K}_b)|\chi_i}\notag\\
+	\epsilon_i & = \braket{\chi_i|f|\chi_i} = \braket{\chi_i|h+\sum_b(\scr{J}_b-\scr{K}_b)|\chi_i}\notag\\
 	& = \braket{\chi_i|h|\chi_i} + \sum_b\braket{\chi_i|\scr{J}_b|\chi_i} - \braket{\chi_i|\scr{K}_b|\chi_i}\notag\\
 	& = \braket{i|h|i} + \sum_b\braket{ib|ib} - \braket{ib|bi}\notag\\
 	& = \braket{i|h|i} + \sum_b\braket{ib||ib}
