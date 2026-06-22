@@ -876,15 +876,15 @@ Hermitian算符矩阵表示的矩阵元满足如下关系：
 
 \subsection{本征值问题}
 \label{sec:1.1.6}
-算符$\op{O}$作用在一个矢量$\ket{a}$上，
-会得到一个新的矢量$\op{O}\ket{a}$。
+算符$\op{O}$作用在一个矢量$\ket{\alpha}$上，
+会得到一个新的矢量$\op{O}\ket{\alpha}$。
 通常情况下，这个新的矢量与原矢量不同。
-如果$\op{O}\ket{a}$与$\ket{a}$只差一个常数，即：
+如果$\op{O}\ket{\alpha}$与$\ket{\alpha}$只差一个常数，即：
 \begin{equation}
- \op{O}\ket{a} = \omega_{\alpha}\ket{a}
+ \op{O}\ket{\alpha} = \omega_{\alpha}\ket{\alpha}
  \label{eq:1.72}
 \end{equation}
-这时，我们可以称$\ket{a}$为算符$\op{O}$关于\emph{本征值} $\omega_{\alpha}$ 的\emph{本征矢量}。将本征矢归一化并不失普遍性：
+这时，我们可以称$\ket{\alpha}$为算符$\op{O}$关于\emph{本征值} $\omega_{\alpha}$ 的\emph{本征矢量}。将本征矢归一化并不失普遍性：
 \begin{equation}
  \olp{\alpha}{\alpha} = 1
  \label{eq:1.73}
@@ -896,7 +896,7 @@ Hermitian算符矩阵表示的矩阵元满足如下关系：
      \Mele{\alpha}{O}{\alpha} = \left\langle\alpha\middle\vert\op{O}^\dagger\middle\vert\alpha\right\rangle = {\Mele{\alpha}{O}{\alpha}}^\ast
      \label{eq:1.74}
  \end{equation}
- 在\autoref{eq:1.72}两边左乘$\bra{a}$，并带入\autoref{eq:1.74}，我们得到：
+ 在\autoref{eq:1.72}两边左乘$\bra{\alpha}$，并带入\autoref{eq:1.74}，我们得到：
  \begin{equation}
      \omega_\alpha = \omega_\alpha^\ast
      \label{eq:1.75}
