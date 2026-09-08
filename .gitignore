@@ -34,5 +34,6 @@
 *.auxlock
 
 *.sh
+!.github/scripts/install-texlive.sh
 
 *.vscode
