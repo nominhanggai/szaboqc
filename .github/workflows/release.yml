@@ -14,11 +14,6 @@ on:
         required: true
         type: string
 
-env:
-  CTAN_URL: https://mirrors.rit.edu/CTAN
-  TL_PACKAGES: amscls amsmath anyfontsize blkarray booktabs braket caption chemformula ctex endnotes enumitem fancyhdr float graphics hyperref latexmk luatex85 l3packages mathtools metafont multirow needspace newfloat pgfplots scalerel siunitx stackengine threeparttable tools ulem xcolor xecjk xfrac
-  TL_FONT_PCK: boondox fandol libertinus-fonts mathalpha psnfss collection-fontsrecommended
-
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -36,13 +31,7 @@ jobs:
         run: echo "VERSION=${{ inputs.version || github.ref_name }}" >> $GITHUB_ENV
 
       - name: Install TeX Live
-        run: |
-          ${{ env.SET_PATH }}
-          wget ${{ env.CTAN_URL }}/systems/texlive/tlnet/install-tl-unx.tar.gz
-          tar -xzf install-tl-unx.tar.gz
-          cd install-tl-20* && ./install-tl --profile ../.github/workflows/texlive.profile
-          tlmgr install ${{ env.TL_PACKAGES }} ${{ env.TL_FONT_PCK }}
-          tlmgr update --self --all --no-auto-install --repository=${{ env.CTAN_URL }}/systems/texlive/tlnet/
+        run: bash .github/scripts/install-texlive.sh
       - name: Compile test file
         run: |
           ${{ env.SET_PATH }}

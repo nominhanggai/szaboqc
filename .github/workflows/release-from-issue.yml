@@ -91,7 +91,7 @@ jobs:
             });
 
   call-release:
-    needs: release
+    needs: [release, validate]
     if: needs.validate.outputs.should_proceed == 'true'
     permissions:
       actions: write
